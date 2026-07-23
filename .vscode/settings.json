@@ -1,16 +1,18 @@
 {
-	"[github-actions-workflow][javascript][json][jsonc][markdown][typescript][xml][yaml]": {
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][json5][jsonc][markdown][php][postcss][scss][snippets][sql][typescript][typescriptreact][xml][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.minimap.maxColumn": 80,
+		"editor.minimap.maxColumn": 80
+	},
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][json5][jsonc][php][postcss][scss][snippets][svelte][typescript][typescriptreact][xml][yaml]": {
 		"editor.rulers": [80]
 	},
 	"editor.codeActionsOnSave": {
+		"source.fixAll": "always",
 		"source.fixAll.eslint": "always",
 		"source.fixAll.markdownlint": "always",
 		"source.organizeImports": "always"
 	},
 	"editor.formatOnSave": true,
-	"eslint.useFlatConfig": true,
 	"explorer.fileNesting.patterns": {
 		".env": ".env.*",
 		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map",
@@ -18,6 +20,6 @@
 		"package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
 		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo"
 	},
-	"typescript.experimental.useTsgo": true,
-	"typescript.tsdk": "node_modules/typescript/lib"
+	"js/ts.experimental.useTsgo": true,
+	"js/ts.tsdk.path": "node_modules/typescript/lib"
 }

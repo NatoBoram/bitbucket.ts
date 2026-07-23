@@ -1,14 +1,17 @@
 import eslint from "@eslint/js"
 import prettier from "eslint-config-prettier"
+import { defineConfig } from "eslint/config"
 import { browser, node } from "globals"
 import tseslint from "typescript-eslint"
-import { defineConfig } from "eslint/config"
 
 export default defineConfig(
 	{
 		languageOptions: {
 			globals: { ...browser, ...node },
-			parserOptions: { project: "./tsconfig.eslint.json" },
+			parserOptions: {
+				project: "./tsconfig.eslint.json",
+				warnOnUnsupportedTypeScriptVersion: false,
+			},
 		},
 	},
 
@@ -16,6 +19,16 @@ export default defineConfig(
 	...tseslint.configs.strictTypeChecked,
 	...tseslint.configs.stylisticTypeChecked,
 	prettier,
+
+	{
+		rules: {
+			"@typescript-eslint/consistent-type-assertions": [
+				"error",
+				{ assertionStyle: "never" },
+			],
+		},
+		ignores: ["**/*.test.ts"],
+	},
 
 	{
 		rules: {
@@ -39,6 +52,10 @@ export default defineConfig(
 			"@typescript-eslint/method-signature-style": "error",
 			"@typescript-eslint/no-import-type-side-effects": "error",
 			"@typescript-eslint/no-unnecessary-qualifier": "error",
+			"@typescript-eslint/no-unused-vars": [
+				"warn",
+				{ argsIgnorePattern: "^_" },
+			],
 			"@typescript-eslint/no-useless-empty-export": "error",
 			"@typescript-eslint/prefer-nullish-coalescing": [
 				"error",
@@ -67,12 +84,16 @@ export default defineConfig(
 		},
 	},
 
+	{ extends: [tseslint.configs.disableTypeChecked], files: ["**/*.js"] },
+
 	{
 		ignores: [
 			".pnpm-store/",
+			"coverage/",
 			"dist/",
 			"docs/",
 			"node_modules/",
+
 			"package-lock.json",
 			"pnpm-lock.yaml",
 		],
