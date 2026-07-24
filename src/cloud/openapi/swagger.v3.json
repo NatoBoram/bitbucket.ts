@@ -27124,7 +27124,7 @@
 			"description": "A workspace is where you create repositories, collaborate on\nyour code, and organize different streams of work in your Bitbucket\nCloud account. Workspaces replace the use of teams and users in API\ncalls.\n"
 		}
 	],
-	"x-revision": "b62ea302637b",
+	"x-revision": "2ecc89e5fe81",
 	"x-atlassian-narrative": {
 		"documents": [
 			{
@@ -28093,7 +28093,8 @@
 						}
 					}
 				],
-				"x-bb-batch-url": "/rest/1.0/accounts/{target_user.uuid}/repositories/{repository.uuid}/pipelines/pipelines_batch"
+				"x-bb-batch-url": "/rest/1.0/accounts/{target_user.uuid}/repositories/{repository.uuid}/pipelines/pipelines_batch",
+				"x-bb-batch-max-size": 100
 			},
 			"pipelines_links_section_href": {
 				"allOf": [
@@ -33029,10 +33030,6 @@
 							"queued": {
 								"type": "boolean",
 								"description": "A boolean flag indicating whether the pull request is queued"
-							},
-							"mergeable": {
-								"type": "boolean",
-								"description": "A boolean flag indicating whether the pull request passes all merge checks"
 							}
 						},
 						"additionalProperties": true

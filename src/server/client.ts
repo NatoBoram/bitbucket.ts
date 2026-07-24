@@ -10744,7 +10744,7 @@ export class BitbucketServerClient {
 	 *  }
 	 *  </pre>
 	 *
-	 *  Add a pending comment.
+	 *  Add a pending comment.  
 	 *
 	 * Pending comments are just comments with the attribute 'state' set to 'PENDING':
 	 *

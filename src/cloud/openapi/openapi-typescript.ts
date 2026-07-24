@@ -23466,8 +23466,6 @@ export interface components {
 				readonly merge_commit?: {
 					readonly hash?: string
 				}
-				/** @description A boolean flag indicating whether the pull request passes all merge checks */
-				readonly mergeable?: boolean
 				/**
 				 * @description The list of users that are collaborating on this pull request.
 				 *             Collaborators are user that:
