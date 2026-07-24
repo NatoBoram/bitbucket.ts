@@ -1,7 +1,7 @@
 {
-	"name": "@coderabbitai/bitbucket",
+	"name": "@natoboram/bitbucket.ts",
 	"version": "1.1.4",
-	"description": "CodeRabbit's TypeScript API client for connecting to Bitbucket Cloud and Bitbucket Data Center",
+	"description": "TypeScript API client for connecting to Bitbucket Cloud and Bitbucket Data Center",
 	"keywords": [
 		"bitbucket-api-v1",
 		"bitbucket-api-v2",
@@ -11,28 +11,45 @@
 		"bitbucket-server",
 		"bitbucket"
 	],
-	"homepage": "https://github.com/coderabbitai/bitbucket",
+	"homepage": "https://github.com/NatoBoram/bitbucket.ts",
 	"bugs": {
-		"url": "https://github.com/coderabbitai/bitbucket/issues"
+		"url": "https://github.com/NatoBoram/bitbucket.ts/issues"
 	},
-	"license": "Apache-2.0",
+	"license": "MPL-2.0",
 	"author": {
 		"name": "CodeRabbit",
-		"url": "https://coderabbit.ai",
-		"email": "support@coderabbit.ai"
+		"email": "support@coderabbit.ai",
+		"url": "https://coderabbit.ai"
 	},
+	"contributors": [
+		{
+			"name": "Nato Boram",
+			"email": "10495562+NatoBoram@users.noreply.github.com",
+			"url": "https://github.com/NatoBoram"
+		}
+	],
+	"funding": [
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/NatoBoram"
+		},
+		{
+			"type": "individual",
+			"url": "https://paypal.me/NatoBoram/5"
+		}
+	],
 	"files": [
 		"dist",
 		"!dist/**/*.test.*"
 	],
 	"main": "dist/index.js",
 	"bin": {
-		"coderabbitai-bitbucket": "dist/main.js"
+		"bitbucket.ts": "dist/main.js"
 	},
-	"repository": "github:coderabbitai/bitbucket",
+	"repository": "github:NatoBoram/bitbucket.ts",
 	"scripts": {
 		"build": "tsgo --build",
-		"clean": "rm -rf dist docs node_modules tsconfig.tsbuildinfo",
+		"clean": "rm -rf coverage dist docs node_modules tsconfig.tsbuildinfo",
 		"dev": "node ./src/main.ts",
 		"docs": "typedoc",
 		"format": "prettier --write .",
@@ -40,6 +57,7 @@
 		"lint:fix": "eslint --fix --quiet .; markdownlint-cli2 \"**/*.md\" --fix; prettier --list-different --write .",
 		"start": "node dist/main.js",
 		"test": "vitest run",
+		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest",
 		"openapi": "./scripts/openapi.sh"
 	},
@@ -51,6 +69,7 @@
 		"@natoboram/load_env": "^2.0.0",
 		"@types/node": "^25.9.3",
 		"@typescript/native-preview": "7.0.0-dev.20260614.1",
+		"@vitest/coverage-v8": "^4.1.10",
 		"dotenv": "^17.4.2",
 		"eslint": "^10.5.0",
 		"eslint-config-prettier": "^10.1.8",

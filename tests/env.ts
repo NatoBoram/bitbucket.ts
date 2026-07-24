@@ -1,4 +1,10 @@
-import { envBool, envString, envUrl, loadEnv } from "@natoboram/load_env"
+import {
+	envBool,
+	envUrl,
+	loadEnv,
+	maybeEnvString,
+	maybeEnvUrl,
+} from "@natoboram/load_env"
 
 /**
  * @see https://nodejs.org/en/learn/getting-started/nodejs-the-difference-between-development-and-production
@@ -30,17 +36,19 @@ const parsed = await loadEnv()
 export const NODE_ENV = toNodeEnv(parsed.NODE_ENV)
 
 export const BITBUCKET_CLOUD_URL = envUrl("BITBUCKET_CLOUD_URL")
-export const BITBUCKET_CLOUD_USERNAME = envString("BITBUCKET_CLOUD_USERNAME")
-export const BITBUCKET_CLOUD_APP_PASSWORD = envString(
+export const BITBUCKET_CLOUD_USERNAME = maybeEnvString(
+	"BITBUCKET_CLOUD_USERNAME",
+)
+export const BITBUCKET_CLOUD_APP_PASSWORD = maybeEnvString(
 	"BITBUCKET_CLOUD_APP_PASSWORD",
 )
 
-export const BITBUCKET_SERVER_URL = envUrl("BITBUCKET_SERVER_URL")
-export const BITBUCKET_SERVER_TOKEN = envString("BITBUCKET_SERVER_TOKEN")
-export const BITBUCKET_SERVER_TEST_PROJECT_KEY = envString(
+export const BITBUCKET_SERVER_URL = maybeEnvUrl("BITBUCKET_SERVER_URL")
+export const BITBUCKET_SERVER_TOKEN = maybeEnvString("BITBUCKET_SERVER_TOKEN")
+export const BITBUCKET_SERVER_TEST_PROJECT_KEY = maybeEnvString(
 	"BITBUCKET_SERVER_TEST_PROJECT_KEY",
 )
-export const BITBUCKET_SERVER_TEST_PROJECT_NAME = envString(
+export const BITBUCKET_SERVER_TEST_PROJECT_NAME = maybeEnvString(
 	"BITBUCKET_SERVER_TEST_PROJECT_NAME",
 )
 

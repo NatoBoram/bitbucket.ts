@@ -6,65 +6,74 @@ import {
 } from "../env.ts"
 import { client } from "./client.ts"
 
-describe.skipIf(SKIP_BITBUCKET_SERVER)(
-	"Repositories",
-	{ concurrent: false, sequential: true },
-	() => {
-		const projectKey = BITBUCKET_SERVER_TEST_PROJECT_KEY
-		const projectName = BITBUCKET_SERVER_TEST_PROJECT_NAME
-		const slug = "test-repository"
-		const name = "Test Repository"
+describe.skipIf(
+	SKIP_BITBUCKET_SERVER ||
+		!BITBUCKET_SERVER_TEST_PROJECT_KEY ||
+		!BITBUCKET_SERVER_TEST_PROJECT_NAME,
+)("Repositories", { concurrent: false, sequential: true }, () => {
+	const projectKey = BITBUCKET_SERVER_TEST_PROJECT_KEY
+	const projectName = BITBUCKET_SERVER_TEST_PROJECT_NAME
+	const slug = "test-repository"
+	const name = "Test Repository"
 
-		test("Create repository", async ({ expect }) => {
-			const created = await client.POST(
-				"/api/latest/projects/{projectKey}/repos",
-				{
-					params: { path: { projectKey } },
-					body: { name, scmId: "git", slug },
-				},
-			)
+	test("Create repository", async ({ expect }) => {
+		if (!projectKey || !projectName)
+			throw new Error("Missing project name or key")
 
-			if (created.error)
-				console.error("Failed to create a repository", created.error)
+		const created = await client.POST(
+			"/api/latest/projects/{projectKey}/repos",
+			{
+				params: { path: { projectKey } },
+				body: { name, scmId: "git", slug },
+			},
+		)
 
-			expect(created).toMatchObject({
-				data: {
-					slug,
-					name,
-					project: { key: projectKey, name: projectName },
-					scmId: "git",
-				},
-				response: { status: 201 },
-			})
-		})
+		if (created.error)
+			console.error("Failed to create a repository", created.error)
 
-		test("Get a repository", async ({ expect }) => {
-			const repository = await client.GET(
-				"/api/latest/projects/{projectKey}/repos/{repositorySlug}",
-				{ params: { path: { projectKey, repositorySlug: slug } } },
-			)
-
-			if (repository.error)
-				console.error("Failed to get a repository", repository.error)
-
-			expect(repository.data).toMatchObject({
+		expect(created).toMatchObject({
+			data: {
 				slug,
 				name,
 				project: { key: projectKey, name: projectName },
 				scmId: "git",
-			})
+			},
+			response: { status: 201 },
 		})
+	})
 
-		test("Delete a repository", async ({ expect }) => {
-			const deleted = await client.DELETE(
-				"/api/latest/projects/{projectKey}/repos/{repositorySlug}",
-				{ params: { path: { projectKey, repositorySlug: slug } } },
-			)
+	test("Get a repository", async ({ expect }) => {
+		if (!projectKey || !projectName)
+			throw new Error("Missing project name or key")
 
-			if (deleted.error)
-				console.error("Failed to delete a repository", deleted.error)
+		const repository = await client.GET(
+			"/api/latest/projects/{projectKey}/repos/{repositorySlug}",
+			{ params: { path: { projectKey, repositorySlug: slug } } },
+		)
 
-			expect(deleted.response.status).toBe(202)
+		if (repository.error)
+			console.error("Failed to get a repository", repository.error)
+
+		expect(repository.data).toMatchObject({
+			slug,
+			name,
+			project: { key: projectKey, name: projectName },
+			scmId: "git",
 		})
-	},
-)
+	})
+
+	test("Delete a repository", async ({ expect }) => {
+		if (!projectKey || !projectName)
+			throw new Error("Missing project name or key")
+
+		const deleted = await client.DELETE(
+			"/api/latest/projects/{projectKey}/repos/{repositorySlug}",
+			{ params: { path: { projectKey, repositorySlug: slug } } },
+		)
+
+		if (deleted.error)
+			console.error("Failed to delete a repository", deleted.error)
+
+		expect(deleted.response.status).toBe(202)
+	})
+})

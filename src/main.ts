@@ -1,1 +1,1 @@
-console.log("@coderabbitai/bitbucket")
+console.log("@natoboram/bitbucket.ts")

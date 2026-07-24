@@ -4,8 +4,6 @@
 		"dbaeumer.vscode-eslint",
 		"editorconfig.editorconfig",
 		"esbenp.prettier-vscode",
-		"github.copilot-chat",
-		"github.copilot",
 		"github.vscode-github-actions",
 		"github.vscode-pull-request-github",
 		"ms-vscode.vscode-typescript-next",
