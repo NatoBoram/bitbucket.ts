@@ -9173,10 +9173,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -9218,10 +9215,7 @@ export interface components {
 			readonly slug?: string
 			/** @enum {string} */
 			readonly state?:
-				| "AVAILABLE"
-				| "INITIALISATION_FAILED"
-				| "INITIALISING"
-				| "OFFLINE"
+				"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 			/** @example Available */
 			readonly statusMessage?: string
 		}
@@ -9545,10 +9539,7 @@ export interface components {
 			readonly slug?: string
 			/** @enum {string} */
 			readonly state?:
-				| "AVAILABLE"
-				| "INITIALISATION_FAILED"
-				| "INITIALISING"
-				| "OFFLINE"
+				"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 			readonly statusMessage?: string
 		}
 		readonly RepositoryHookDetails: {
@@ -9557,9 +9548,7 @@ export interface components {
 			readonly key?: string
 			readonly name?: string
 			readonly supportedScopes?: readonly (
-				| "GLOBAL"
-				| "PROJECT"
-				| "REPOSITORY"
+				"GLOBAL" | "PROJECT" | "REPOSITORY"
 			)[]
 			/** @enum {string} */
 			readonly type?: "POST_RECEIVE" | "PRE_PULL_REQUEST_MERGE" | "PRE_RECEIVE"
@@ -9753,12 +9742,7 @@ export interface components {
 			 * @enum {string}
 			 */
 			readonly autoMergeProcessingStatus?:
-				| "CANCELLED"
-				| "LOCK_FAILURE"
-				| "MERGED"
-				| "STALE"
-				| "UNKNOWN"
-				| "VETOED"
+				"CANCELLED" | "LOCK_FAILURE" | "MERGED" | "STALE" | "UNKNOWN" | "VETOED"
 			readonly pullRequest?: {
 				readonly closed?: boolean
 				/**
@@ -9877,10 +9861,7 @@ export interface components {
 						readonly slug?: string
 						/** @enum {string} */
 						readonly state?:
-							| "AVAILABLE"
-							| "INITIALISATION_FAILED"
-							| "INITIALISING"
-							| "OFFLINE"
+							"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 						/** @example Available */
 						readonly statusMessage?: string
 					}
@@ -10004,10 +9985,7 @@ export interface components {
 						readonly slug?: string
 						/** @enum {string} */
 						readonly state?:
-							| "AVAILABLE"
-							| "INITIALISATION_FAILED"
-							| "INITIALISING"
-							| "OFFLINE"
+							"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 						/** @example Available */
 						readonly statusMessage?: string
 					}
@@ -10057,9 +10035,7 @@ export interface components {
 			 * @enum {string}
 			 */
 			readonly restrictionState?:
-				| "NONE"
-				| "RESTRICTED_MODIFIABLE"
-				| "RESTRICTED_UNMODIFIABLE"
+				"NONE" | "RESTRICTED_MODIFIABLE" | "RESTRICTED_UNMODIFIABLE"
 			/** @description The scope that these settings apply to. */
 			readonly scope?: {
 				/**
@@ -10197,11 +10173,7 @@ export interface components {
 			readonly ref?: string
 			/** @enum {string} */
 			readonly state?:
-				| "CANCELLED"
-				| "FAILED"
-				| "INPROGRESS"
-				| "SUCCESSFUL"
-				| "UNKNOWN"
+				"CANCELLED" | "FAILED" | "INPROGRESS" | "SUCCESSFUL" | "UNKNOWN"
 			readonly testResults?: {
 				/**
 				 * Format: int32
@@ -10252,11 +10224,7 @@ export interface components {
 			readonly ref?: string
 			/** @enum {string} */
 			readonly state:
-				| "CANCELLED"
-				| "FAILED"
-				| "INPROGRESS"
-				| "SUCCESSFUL"
-				| "UNKNOWN"
+				"CANCELLED" | "FAILED" | "INPROGRESS" | "SUCCESSFUL" | "UNKNOWN"
 			readonly testResults?: {
 				/**
 				 * Format: int32
@@ -10333,12 +10301,7 @@ export interface components {
 					}
 					/** @enum {string} */
 					readonly type?:
-						| "ADD"
-						| "COPY"
-						| "DELETE"
-						| "MODIFY"
-						| "MOVE"
-						| "UNKNOWN"
+						"ADD" | "COPY" | "DELETE" | "MODIFY" | "MOVE" | "UNKNOWN"
 				}
 				readonly theirChange?: {
 					readonly path?: {
@@ -10375,12 +10338,7 @@ export interface components {
 					}
 					/** @enum {string} */
 					readonly type?:
-						| "ADD"
-						| "COPY"
-						| "DELETE"
-						| "MODIFY"
-						| "MOVE"
-						| "UNKNOWN"
+						"ADD" | "COPY" | "DELETE" | "MODIFY" | "MOVE" | "UNKNOWN"
 				}
 			}
 			/** @example abcdef0123abcdef4567abcdef8987abcdef6543 */
@@ -10510,10 +10468,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -10547,10 +10502,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -11657,10 +11609,7 @@ export interface components {
 						readonly slug?: string
 						/** @enum {string} */
 						readonly state?:
-							| "AVAILABLE"
-							| "INITIALISATION_FAILED"
-							| "INITIALISING"
-							| "OFFLINE"
+							"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 						/** @example Available */
 						readonly statusMessage?: string
 					}
@@ -11784,10 +11733,7 @@ export interface components {
 						readonly slug?: string
 						/** @enum {string} */
 						readonly state?:
-							| "AVAILABLE"
-							| "INITIALISATION_FAILED"
-							| "INITIALISING"
-							| "OFFLINE"
+							"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 						/** @example Available */
 						readonly statusMessage?: string
 					}
@@ -11896,12 +11842,7 @@ export interface components {
 				}
 				/** @enum {string} */
 				readonly type?:
-					| "ADD"
-					| "COPY"
-					| "DELETE"
-					| "MODIFY"
-					| "MOVE"
-					| "UNKNOWN"
+					"ADD" | "COPY" | "DELETE" | "MODIFY" | "MOVE" | "UNKNOWN"
 			}
 			readonly theirChange?: {
 				readonly path?: {
@@ -11938,12 +11879,7 @@ export interface components {
 				}
 				/** @enum {string} */
 				readonly type?:
-					| "ADD"
-					| "COPY"
-					| "DELETE"
-					| "MODIFY"
-					| "MOVE"
-					| "UNKNOWN"
+					"ADD" | "COPY" | "DELETE" | "MODIFY" | "MOVE" | "UNKNOWN"
 			}
 		}
 		readonly RestConflictChange: {
@@ -12027,11 +11963,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -12044,11 +11976,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -12075,11 +12003,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -12092,11 +12016,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -12193,10 +12113,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -12230,10 +12147,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -12778,10 +12692,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -12815,10 +12726,7 @@ export interface components {
 			readonly slug?: string
 			/** @enum {string} */
 			readonly state?:
-				| "AVAILABLE"
-				| "INITIALISATION_FAILED"
-				| "INITIALISING"
-				| "OFFLINE"
+				"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 			/** @example Available */
 			readonly statusMessage?: string
 		}
@@ -12905,11 +12813,7 @@ export interface components {
 			 * @enum {string}
 			 */
 			readonly state?:
-				| "AVAILABLE"
-				| "DELETING"
-				| "DISABLED"
-				| "DRAINING"
-				| "OFFLINE"
+				"AVAILABLE" | "DELETING" | "DISABLED" | "DRAINING" | "OFFLINE"
 		}
 		readonly RestMigrationRepository: {
 			/** @enum {string} */
@@ -12979,10 +12883,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -13016,10 +12917,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -13330,10 +13228,7 @@ export interface components {
 			 * @enum {string}
 			 */
 			readonly processedState?:
-				| "FAILED"
-				| "IN_PROGRESS"
-				| "PROCESSED"
-				| "UNPROCESSED"
+				"FAILED" | "IN_PROGRESS" | "PROCESSED" | "UNPROCESSED"
 			readonly project?: {
 				readonly avatar?: string
 				readonly avatarUrl?: string
@@ -13450,10 +13345,7 @@ export interface components {
 						readonly slug?: string
 						/** @enum {string} */
 						readonly state?:
-							| "AVAILABLE"
-							| "INITIALISATION_FAILED"
-							| "INITIALISING"
-							| "OFFLINE"
+							"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 						/** @example Available */
 						readonly statusMessage?: string
 					}
@@ -13487,10 +13379,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -13577,10 +13466,7 @@ export interface components {
 						readonly slug?: string
 						/** @enum {string} */
 						readonly state?:
-							| "AVAILABLE"
-							| "INITIALISATION_FAILED"
-							| "INITIALISING"
-							| "OFFLINE"
+							"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 						/** @example Available */
 						readonly statusMessage?: string
 					}
@@ -13614,10 +13500,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -13747,11 +13630,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -13764,11 +13643,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -13971,10 +13846,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -14008,10 +13880,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -14139,10 +14008,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -14176,10 +14042,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -14263,11 +14126,7 @@ export interface components {
 			readonly type?: {
 				/** @enum {string} */
 				readonly id?:
-					| "ANY_REF"
-					| "BRANCH"
-					| "MODEL_BRANCH"
-					| "MODEL_CATEGORY"
-					| "PATTERN"
+					"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 				/** @example Branch */
 				readonly name?: string
 			}
@@ -14275,11 +14134,7 @@ export interface components {
 		readonly RestRefMatcherType: {
 			/** @enum {string} */
 			readonly id?:
-				| "ANY_REF"
-				| "BRANCH"
-				| "MODEL_BRANCH"
-				| "MODEL_CATEGORY"
-				| "PATTERN"
+				"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 			/** @example Branch */
 			readonly name?: string
 		}
@@ -14305,11 +14160,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -14452,10 +14303,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -14489,10 +14337,7 @@ export interface components {
 			readonly slug?: string
 			/** @enum {string} */
 			readonly state?:
-				| "AVAILABLE"
-				| "INITIALISATION_FAILED"
-				| "INITIALISING"
-				| "OFFLINE"
+				"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 			/** @example Available */
 			readonly statusMessage?: string
 		}
@@ -14561,10 +14406,7 @@ export interface components {
 			 * @enum {string}
 			 */
 			readonly permission?:
-				| "ADMIN"
-				| "PROJECT_ADMIN"
-				| "REPO_ADMIN"
-				| "SYS_ADMIN"
+				"ADMIN" | "PROJECT_ADMIN" | "REPO_ADMIN" | "SYS_ADMIN"
 		}
 		readonly RestRepositoryPullRequestSettings: {
 			readonly mergeConfig?: {
@@ -14641,10 +14483,7 @@ export interface components {
 				readonly type?: "ADD" | "DELETE" | "UPDATE"
 				/** @enum {string} */
 				readonly updatedType?:
-					| "FORCED"
-					| "NOT_FORCED"
-					| "UNKNOWN"
-					| "UNRESOLVED"
+					"FORCED" | "NOT_FORCED" | "UNKNOWN" | "UNRESOLVED"
 			}
 			readonly repository?: {
 				readonly archived?: boolean
@@ -14704,10 +14543,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -14741,10 +14577,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -14794,11 +14627,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -14816,11 +14645,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -14844,11 +14669,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -14890,11 +14711,7 @@ export interface components {
 				readonly type?: {
 					/** @enum {string} */
 					readonly id?:
-						| "ANY_REF"
-						| "BRANCH"
-						| "MODEL_BRANCH"
-						| "MODEL_CATEGORY"
-						| "PATTERN"
+						"ANY_REF" | "BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 					/** @example Branch */
 					readonly name?: string
 				}
@@ -15205,10 +15022,7 @@ export interface components {
 					readonly slug?: string
 					/** @enum {string} */
 					readonly state?:
-						| "AVAILABLE"
-						| "INITIALISATION_FAILED"
-						| "INITIALISING"
-						| "OFFLINE"
+						"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 					/** @example Available */
 					readonly statusMessage?: string
 				}
@@ -15242,10 +15056,7 @@ export interface components {
 				readonly slug?: string
 				/** @enum {string} */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @example Available */
 				readonly statusMessage?: string
 			}
@@ -15390,11 +15201,7 @@ export interface components {
 			 * @enum {string}
 			 */
 			readonly state?:
-				| "INITIALIZING"
-				| "INSTALLED"
-				| "PENDING"
-				| "REMOVED"
-				| "UNKNOWN"
+				"INITIALIZING" | "INSTALLED" | "PENDING" | "REMOVED" | "UNKNOWN"
 		}
 		readonly RestUpstreamSettings: {
 			/** @enum {string} */
@@ -18956,10 +18763,7 @@ export interface operations {
 				readonly name: readonly string[]
 				/** @description The permission to grant */
 				readonly permission:
-					| "ADMIN"
-					| "LICENSED_USER"
-					| "PROJECT_CREATE"
-					| "SYS_ADMIN"
+					"ADMIN" | "LICENSED_USER" | "PROJECT_CREATE" | "SYS_ADMIN"
 			}
 			readonly header?: never
 			readonly path?: never
@@ -19185,10 +18989,7 @@ export interface operations {
 				readonly name: readonly string[]
 				/** @description The permission to grant */
 				readonly permission:
-					| "ADMIN"
-					| "LICENSED_USER"
-					| "PROJECT_CREATE"
-					| "SYS_ADMIN"
+					"ADMIN" | "LICENSED_USER" | "PROJECT_CREATE" | "SYS_ADMIN"
 			}
 			readonly header?: never
 			readonly path?: never
@@ -35341,10 +35142,7 @@ export interface operations {
 				readonly start?: number
 				/** @description (optional) if specified, it must be a valid repository state name and will limit the resulting repository list to ones that are in the specified state. The currently supported explicit state values are <tt>AVAILABLE</tt>, <tt>INITIALISING</tt>, <tt>INITIALISATION_FAILED</tt> and <tt>OFFLINE</tt>.<br> <em>Available since 5.13</em> */
 				readonly state?:
-					| "AVAILABLE"
-					| "INITIALISATION_FAILED"
-					| "INITIALISING"
-					| "OFFLINE"
+					"AVAILABLE" | "INITIALISATION_FAILED" | "INITIALISING" | "OFFLINE"
 				/** @description (optional) if specified, this will limit the resulting repository list based on the repositories visibility. Valid values are <em>public</em> or <em>private</em>. */
 				readonly visibility?: "private" | "public"
 			}
@@ -36294,10 +36092,7 @@ export interface operations {
 				readonly matcherId?: string
 				/** @description Matcher type to filter on */
 				readonly matcherType?:
-					| "BRANCH"
-					| "MODEL_BRANCH"
-					| "MODEL_CATEGORY"
-					| "PATTERN"
+					"BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 				/**
 				 * @description Start number for the page (inclusive). If not passed, first page is assumed.
 				 * @example 0
@@ -36305,10 +36100,7 @@ export interface operations {
 				readonly start?: number
 				/** @description Types of restrictions to filter on. */
 				readonly type?:
-					| "fast-forward-only"
-					| "no-deletes"
-					| "pull-request-only"
-					| "read-only"
+					"fast-forward-only" | "no-deletes" | "pull-request-only" | "read-only"
 			}
 			readonly header?: never
 			readonly path: {
@@ -36519,10 +36311,7 @@ export interface operations {
 				readonly matcherId?: string
 				/** @description Matcher type to filter on */
 				readonly matcherType?:
-					| "BRANCH"
-					| "MODEL_BRANCH"
-					| "MODEL_CATEGORY"
-					| "PATTERN"
+					"BRANCH" | "MODEL_BRANCH" | "MODEL_CATEGORY" | "PATTERN"
 				/**
 				 * @description Start number for the page (inclusive). If not passed, first page is assumed.
 				 * @example 0
@@ -36530,10 +36319,7 @@ export interface operations {
 				readonly start?: number
 				/** @description Types of restrictions to filter on. */
 				readonly type?:
-					| "fast-forward-only"
-					| "no-deletes"
-					| "pull-request-only"
-					| "read-only"
+					"fast-forward-only" | "no-deletes" | "pull-request-only" | "read-only"
 			}
 			readonly header?: never
 			readonly path: {
