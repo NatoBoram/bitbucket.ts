@@ -20486,11 +20486,7 @@ export interface components {
 		readonly commit_file: Readonly<Record<string, unknown>> & {
 			/** @enum {string} */
 			readonly attributes?:
-				| "binary"
-				| "executable"
-				| "lfs"
-				| "link"
-				| "subrepository"
+				"binary" | "executable" | "lfs" | "link" | "subrepository"
 			readonly commit?: components["schemas"]["commit"]
 			/** @description The escaped version of the path as it appears in a diff. If the path does not require escaping this will be the same as path. */
 			readonly escaped_path?: string
@@ -21076,11 +21072,7 @@ export interface components {
 				readonly milestone?: components["schemas"]["milestone"]
 				/** @enum {string} */
 				readonly priority?:
-					| "blocker"
-					| "critical"
-					| "major"
-					| "minor"
-					| "trivial"
+					"blocker" | "critical" | "major" | "minor" | "trivial"
 				readonly reporter?: components["schemas"]["account"]
 				readonly repository?: components["schemas"]["repository"]
 				/** @enum {string} */
@@ -25744,11 +25736,7 @@ export interface operations {
 				readonly "target.selector.pattern"?: string
 				/** @description The type of pipeline to filter by. */
 				readonly "target.selector.type"?:
-					| "BRANCH"
-					| "CUSTOM"
-					| "DEFAULT"
-					| "PULLREQUESTS"
-					| "TAG"
+					"BRANCH" | "CUSTOM" | "DEFAULT" | "PULLREQUESTS" | "TAG"
 				/** @description The trigger type to filter by. */
 				readonly trigger_type?: "MANUAL" | "PARENT_STEP" | "PUSH" | "SCHEDULED"
 			}
