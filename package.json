@@ -109,5 +109,8 @@
 		}
 	},
 	"types": "dist/index.d.ts",
-	"module": "dist/index.js"
+	"module": "dist/index.js",
+	"sideEffects": [
+		"dist/main.js"
+	]
 }
